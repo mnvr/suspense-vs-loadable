@@ -5,6 +5,9 @@ const IndexPage = () => {
     return (
         <ul>
             <li>
+                <Link to={"/fade-in"}>Loadable + Fade-in animation</Link>
+            </li>
+            <li>
                 <Link to={"/loadable"}>Loadable</Link>
             </li>
             <li>

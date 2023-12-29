@@ -40,7 +40,11 @@ const delayed = async (fn, ms) => {
 };
 
 const ComponentThatUsesWindowWrappedInLoadable = loadable(async () =>
-    delayed(() => import("../components/ComponentThatUsesWindow"), 2000)
+    // Simulate a delay so that we can admire the brilliance of the animation.
+    delayed(
+        () => import("../components/ComponentThatUsesWindowAndFadesIn"),
+        2000
+    )
 );
 
 const Loading = () => {
