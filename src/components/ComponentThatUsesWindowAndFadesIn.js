@@ -5,18 +5,15 @@ import "../styles/style.css";
 import { CSSTransition } from "react-transition-group";
 
 const ComponentThatUsesWindowAndFadesIn = () => {
-    const [isVisible, setIsVisible] = React.useState(false);
-
-    React.useEffect(() => {
-        setIsVisible(true);
-    }, []);
-
     const message = `Window size: ${window.innerWidth} x ${window.innerHeight}`;
-    console.log(
-        `Rendering ComponentThatUsesWindowAndFadesIn with isVisible ${isVisible}`
-    );
+    console.log("Rendering ComponentThatUsesWindowAndFadesIn");
     return (
-        <CSSTransition in={isVisible} timeout={2000} classNames="my-component">
+        <CSSTransition
+            in={true}
+            appear={true}
+            timeout={2000}
+            classNames="my-component"
+        >
             <div>
                 <h4>ComponentThatUsesWindowAndFadesIn</h4>
                 <p>{message}</p>

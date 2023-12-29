@@ -1,8 +1,8 @@
-.my-component-enter {
+.my-component-appear {
     opacity: 0;
 }
 
-.my-component-enter-active {
+.my-component-appear-active {
     opacity: 1;
     transition: opacity 2000ms;
 }
