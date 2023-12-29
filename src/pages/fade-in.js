@@ -26,23 +26,22 @@ const LoadableComponentContainer = () => {
     return <ComponentThatUsesWindowWrappedInLoadable fallback={<Loading />} />;
 };
 
-const wait = async (ms) => {
-    await new Promise((resolve) => {
+const wait = (ms) =>
+    new Promise((resolve) => {
         setTimeout(() => {
-            console.log("done");
+            console.log("Resolving wait");
             resolve();
         }, ms);
     });
-};
 
 const delayed = async (fn, ms) => {
     await wait(ms);
     return fn();
 };
 
-const ComponentThatUsesWindowWrappedInLoadable = loadable(async () => {
-    return delayed(() => import("../components/ComponentThatUsesWindow"), 2000);
-});
+const ComponentThatUsesWindowWrappedInLoadable = loadable(async () =>
+    delayed(() => import("../components/ComponentThatUsesWindow"), 2000)
+);
 
 const Loading = () => {
     console.log("Rendering Loading");
