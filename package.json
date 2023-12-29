@@ -1,0 +1,19 @@
+{
+    "name": "suspense-vs-loadable",
+    "private": true,
+    "dependencies": {
+        "@loadable/component": "^5.16.3",
+        "gatsby": "^5.13.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.8"
+    },
+    "scripts": {
+        "build": "gatsby build",
+        "dev": "gatsby develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean"
+    }
+}
